@@ -1,0 +1,68 @@
+th.btn-column,
+td.btn-column
+{
+  width: 1px;
+}
+
+th
+{
+  font-weight: normal;
+}
+
+.table-panel tr
+{
+  th:first-child,
+  td:first-child
+  {
+    padding-left: $grid-gutter-width / 2;
+  }
+
+  th:last-child,
+  td:last-child
+  {
+    padding-right: $grid-gutter-width / 2;
+  }
+
+  td
+  {
+    vertical-align: middle !important;
+  }
+}
+
+.table-alt-mobile
+{
+  thead
+  {
+    @extend .hidden-sm;
+    @extend .hidden-xs;
+  }
+
+  tr
+  {
+    th,
+    td
+    {
+      @extend .hidden-sm;
+      @extend .hidden-xs;
+    }
+
+    th:last-child,
+    td:last-child
+    {
+      padding-left: $grid-gutter-width / 2;
+
+      @extend .visible-sm-block;
+      @extend .visible-xs-block;
+      @extend .hidden-md;
+      @extend .hidden-lg;
+    }
+
+    &:first-child
+    {
+      td:last-child
+      {
+        border-top: none;
+      }
+    }
+  }
+}

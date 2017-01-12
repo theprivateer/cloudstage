@@ -1,0 +1,55 @@
+.panel-nav
+{
+  @extend .nav-tabs;
+
+  >li.active>a
+  {
+    background-color: #fff;
+  }
+
+  a
+  {
+    color: inherit;
+  }
+
+  li:last-child a
+  {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .panel-nav
+  {
+    border: solid 1px #ddd;
+    margin-bottom: $grid-gutter-width;
+
+    >li,
+    >li.active>a,
+    >li.active>a:hover
+    {
+      width: 100%;
+      border: none;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    >li>a,
+    >li>a:hover
+    {
+      border: none;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .panel.has-tabs
+  {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
