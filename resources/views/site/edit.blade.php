@@ -9,12 +9,13 @@
                 </div>
 
                 {!! Form::model($site) !!}
+
                 <div class="panel-body">
                     <!-- Subdomain Form Input -->
                     <div class="form-group">
                         {!! Form::label('subdomain', 'Subdomain:') !!}
                         <div class="input-group">
-                            {!! Form::text('subdomain', null, ['class' => 'form-control text-right', 'disabled']) !!}
+                            {!! Form::text('subdomain', null, ['class' => 'form-control', 'disabled']) !!}
                             <div class="input-group-addon">.{{ env('HOSTED_ZONE_DOMAIN') }}</div>
                         </div>
                     </div>
@@ -26,15 +27,27 @@
                     </div>
 
                     <!-- Target Form Input -->
-                    <div class="form-group">
+                    <div class="form-{{ $errors->has('target') ? ' has-error' : '' }}">
                         {!! Form::label('target', 'Target:') !!}
                         {!! Form::text('target', null, ['class' => 'form-control', 'placeholder' => '127.0.0.1, example.com']) !!}
+
+                        @if ($errors->has('target'))
+                            <span class="help-block">
+                            <strong>{{ $errors->first('target') }}</strong>
+                        </span>
+                        @endif
                     </div>
 
                     <!-- Ttl Form Input -->
-                    <div class="form-group">
+                    <div class="form-group{{ $errors->has('ttl') ? ' has-error' : '' }}">
                         {!! Form::label('ttl', 'TTL:') !!}
                         {!! Form::text('ttl', 60, ['class' => 'form-control']) !!}
+
+                        @if ($errors->has('ttl'))
+                            <span class="help-block">
+                            <strong>{{ $errors->first('ttl') }}</strong>
+                        </span>
+                        @endif
                     </div>
                 </div>
 

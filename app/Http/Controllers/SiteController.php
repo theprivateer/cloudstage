@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateSite;
 use App\Jobs\UpdateRoute53;
 use App\Site;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class SiteController extends Controller
         return view('site.create');
     }
 
-    public function store(Request $request)
+    public function store(CreateSite $request)
     {
         $site = new Site($request->except(['_token']));
 

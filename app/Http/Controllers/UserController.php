@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateUser;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,7 +12,7 @@ class UserController extends Controller
         return view('user.edit');
     }
 
-    public function update(Request $request)
+    public function update(UpdateUser $request)
     {
         $formData = $request->except('_token');
 

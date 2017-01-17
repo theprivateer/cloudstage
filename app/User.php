@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Privateer\Uuid\EloquentUuid;
+use Spatie\Activitylog\Traits\CausesActivity;
 
 class User extends Authenticatable
 {
-    use Notifiable, EloquentUuid;
+    use Notifiable, EloquentUuid, CausesActivity;
 
     /**
      * The attributes that are mass assignable.
@@ -27,6 +28,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function logins()
+    {
+        return $this->hasMany(Login::class);
+    }
 
     public function sites()
     {

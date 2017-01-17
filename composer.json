@@ -10,6 +10,7 @@
         "laracasts/flash": "^2.0",
         "laravel/framework": "5.3.*",
         "laravelcollective/html": "^5.3",
+        "spatie/laravel-activitylog": "^1.10",
         "theprivateer/eloquent-uuid": "^0.1.1"
     },
     "require-dev": {

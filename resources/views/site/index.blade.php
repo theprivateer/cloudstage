@@ -25,7 +25,7 @@
                     <td>{{ $site->type }}</td>
                     <td>{{ $site->target }}</td>
                     <td>{{ $site->ttl }}</td>
-                    <td>{{ $site->created_at->addMonth()->format('d/m/Y') }}</td>
+                    <td>{{ $site->expires_at('d/m/Y') }}</td>
                     <td>
                         <a href="{{ route('site.edit', $site->uuid) }}" class="btn btn-default btn-sm">Edit</a>
                     </td>

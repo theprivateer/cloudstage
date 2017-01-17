@@ -168,6 +168,7 @@ return [
          */
         Aws\Laravel\AwsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Spatie\Activitylog\ActivitylogServiceProvider::class,
 
         /*
          * Application Service Providers...

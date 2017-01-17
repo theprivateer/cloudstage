@@ -24,6 +24,8 @@ class CreateSitesTable extends Migration
             $table->string('ttl')->default('60');
             $table->string('target');
 
+            $table->unsignedInteger('lifespan')->default(30);
+
             $table->timestamps();
         });
     }
