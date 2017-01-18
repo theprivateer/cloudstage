@@ -87,7 +87,7 @@
     </div>
 
     <footer class="container">
-        <p class="text-center"><small>&copy; The Privateer {{ date('Y') }}</small></p>
+        <p class="text-center"><small>Made by <a href="https://github.com/theprivateer">The Privateer</a> {{ date('Y') }}</small></p>
     </footer>
     <!-- Scripts -->
     @section('scripts')

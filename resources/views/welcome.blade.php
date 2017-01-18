@@ -47,6 +47,13 @@
 
             .title {
                 font-size: 84px;
+                width: 400px;
+                height: 267px;
+                background: url('/img/cloudstage-logo-lg.png') no-repeat;
+                font: 0/0 a;
+                text-shadow: none;
+                background-color: transparent;
+                border: 0;
             }
 
             .links > a {
@@ -82,13 +89,19 @@
                     {{ config('app.name', 'CloudStage') }}
                 </div>
 
-                {{--<div class="links">--}}
-                    {{--<a href="https://laravel.com/docs">Documentation</a>--}}
-                    {{--<a href="https://laracasts.com">Laracasts</a>--}}
-                    {{--<a href="https://laravel-news.com">News</a>--}}
-                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
-                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
-                {{--</div>--}}
+                <p class="m-b-md">Get a free development/staging subdomain for your site.</p>
+
+                <div class="links m-b-md">
+                    @if (Auth::check())
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
+                    <a href="https://github.com/theprivateer/cloudstage">GitHub</a>
+                </div>
+
+                <p><small>Made by <a href="https://github.com/theprivateer">The Privateer</a> {{ date('Y') }}</small></p>
             </div>
         </div>
     </body>

@@ -7697,6 +7697,19 @@ button.close {
   }
 }
 
+.navbar-brand {
+  width: 202px;
+  background-size: auto 34px;
+  background-image: url("../img/cloudstage-logo-inline.svg");
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
 label {
   font-weight: normal;
 }

@@ -1,0 +1,9 @@
+.navbar-brand
+{
+  width: 202px;
+  background-size: auto 34px;
+  background-image: url('../img/cloudstage-logo-inline.svg');
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+  @include hide-text;
+}
