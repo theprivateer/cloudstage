@@ -1,3 +1,5 @@
+![Cloudstage](https://s3-ap-southeast-2.amazonaws.com/theprivateer/static/cloudstage-inline-1.png)
+
 # CloudStage
 
 Intro...
