@@ -99,7 +99,7 @@
     </div>
 
     <footer class="container">
-        <p class="text-center"><small>Made by <a href="https://github.com/theprivateer">The Privateer</a> {{ date('Y') }}</small></p>
+        <p class="text-center"><small>Made by <a href="https://philstephens.io">Phil Stephens</a> {{ date('Y') }}</small></p>
     </footer>
     <!-- Scripts -->
     @section('scripts')

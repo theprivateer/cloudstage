@@ -87,10 +87,10 @@
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
                     @endif
-                    <a href="https://github.com/theprivateer/cloudstage">GitHub</a>
+                    {{--<a href="https://github.com/theprivateer/cloudstage">GitHub</a>--}}
                 </div>
 
-                <p><small>Made by <a href="https://github.com/theprivateer">The Privateer</a> {{ date('Y') }}</small></p>
+                <p><small>Made by <a href="https://philstephens.io">Phil Stephens</a> {{ date('Y') }}</small></p>
             </div>
         </div>
     </body>
