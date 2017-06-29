@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Login;
+use App\Notifications\UserRegistered;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -73,6 +74,10 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user)
     {
+        $me = User::find(1);
+
+        $me->notify(new UserRegistered($user));
+
         $user->logins()->save(new Login);
 
         return redirect($this->redirectPath());

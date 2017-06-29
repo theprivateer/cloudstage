@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateSite;
 use App\Jobs\UpdateRoute53;
+use App\Notifications\SiteCreated;
 use App\Site;
+use App\User;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -28,6 +30,10 @@ class SiteController extends Controller
         \Auth::user()->sites()->save($site);
 
         dispatch(new UpdateRoute53($site));
+
+        $me = User::find(1);
+
+        $me->notify(new SiteCreated($site));
 
         return redirect()->route('site.index');
     }
