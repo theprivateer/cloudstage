@@ -78,19 +78,19 @@
                     {{ config('app.name', 'CloudStage') }}
                 </div>
 
-                <p class="m-b-md">Get a free development/staging subdomain for your site.</p>
+                {{--<p class="m-b-md">Get a free development/staging subdomain for your site.</p>--}}
 
-                <div class="links m-b-md">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                {{--<div class="links m-b-md">--}}
+                    {{--@if (Auth::check())--}}
+                        {{--<a href="{{ url('/home') }}">Home</a>--}}
+                    {{--@else--}}
+                        {{--<a href="{{ url('/login') }}">Login</a>--}}
+                        {{--<a href="{{ url('/register') }}">Register</a>--}}
+                    {{--@endif--}}
                     {{--<a href="https://github.com/theprivateer/cloudstage">GitHub</a>--}}
-                </div>
+                {{--</div>--}}
 
-                <p><small>Made by <a href="https://philstephens.io">Phil Stephens</a> {{ date('Y') }}</small></p>
+                {{--<p><small>Made by <a href="https://philstephens.io">Phil Stephens</a> {{ date('Y') }}</small></p>--}}
             </div>
         </div>
     </body>
